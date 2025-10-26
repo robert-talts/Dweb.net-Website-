@@ -112,34 +112,41 @@
     </section>
 
     <section class="section" id="contact">
-      <div class="container narrow">
-        <h2>Contact</h2>
-          <article class="contact-card">
-            <h3>Crypto ATM locations</h3>
-            <p>Have a location for a crypto ATM? <a href="mailto:bob@dweb.net?subject=Crypto%20ATM%20Location">Contact us</a>.</p>
-          </article>
-          <article class="contact-card">
-            <h3>Domain inquiries</h3>
-            <p>Interested in buying <strong>dweb.net</strong>? Email <a href="mailto:bob@dweb.net?subject=dweb.net%20domain%20inquiry">bob@dweb.net</a>.</p>
-          </article>
-        </div>
+  <div class="container narrow">
+    <h2>Contact</h2>
 
-        <form id="contactForm" class="contact-form">
-          <h3>Send a message</h3>
-          <label> Name
-            <input name="name" autocomplete="name" required>
-          </label>
-          <label> Email
-            <input type="email" name="email" autocomplete="email" required>
-          </label>
-          <label> Message
-            <textarea name="message" rows="5" required></textarea>
-          </label>
-          <button class="btn" type="submit">Send</button>
-          <p id="formStatus" role="status" aria-live="polite"></p>
-        </form>
-      </div>
-    </section>
+    <div class="contact-cards">
+      <article class="contact-card">
+        <h3>Crypto ATM locations</h3>
+        <p>Have a location for a crypto ATM?
+          <a href="mailto:bob@dweb.net?subject=Crypto%20ATM%20Location">Contact us</a>.
+        </p>
+      </article>
+
+      <article class="contact-card">
+        <h3>Domain inquiries</h3>
+        <p>Interested in buying <strong>dweb.net</strong>? Email
+          <a href="mailto:bob@dweb.net?subject=dweb.net%20domain%20inquiry">bob@dweb.net</a>.
+        </p>
+      </article>
+    </div> <!-- ✅ closes .contact-cards -->
+
+    <form id="contactForm" class="contact-form">
+      <h3>Send a message</h3>
+      <label> Name
+        <input name="name" autocomplete="name" required>
+      </label>
+      <label> Email
+        <input type="email" name="email" autocomplete="email" required>
+      </label>
+      <label> Message
+        <textarea name="message" rows="5" required></textarea>
+      </label>
+      <button class="btn" type="submit">Send</button>
+      <p id="formStatus" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
   </main>
 
   <footer class="site-footer">
