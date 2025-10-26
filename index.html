@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Decentralized Web Technologies Inc. — dweb.net</title>
+  <meta name="description" content="Decentralized Web Technologies Inc. — building simple, open, resilient internet infrastructure.">
+  <link rel="preload" href="styles.css" as="style">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+  <link rel="icon" type="image/png" sizes="64x64" href="favicon-64.png">
+  <link rel="icon" type="image/png" sizes="180x180" href="favicon-180.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="favicon-512.png">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <meta name="color-scheme" content="light dark">
+  <meta property="og:title" content="Decentralized Web Technologies Inc.">
+  <meta property="og:description" content="Simple, open, resilient internet infrastructure.">
+  <meta property="og:url" content="https://dweb.net">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://dweb.net/favicon-512.png">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="#top" aria-label="Home">
+        <img src="logo-horizontal.png" alt="D-Web Technologies Inc. logo" class="logo-header">
+      </a>
+      <nav aria-label="Primary">
+        <button class="menu-btn" aria-expanded="false" aria-controls="menu" id="menuBtn">Menu</button>
+        <ul id="menu" class="menu">
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">What we do</a></li>
+          <li><a href="#team">Team</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="https://x.com/DWebTechSA" target="_blank" rel="me noopener">Twitter</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <h1>Decentralize what matters.</h1>
+          <p>We prototype and operate real-world integrations for a more open, resilient internet.</p>
+          <div class="cta">
+            <a class="btn" href="#projects">What we do</a>
+            <a class="btn btn-ghost" href="#contact">Contact</a>
+          </div>
+        </div>
+        <div class="hero-art">
+          <img src="logo-horizontal.png" alt="" class="hero-logo">
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="container narrow">
+        <h2>About</h2>
+        <p>We build and support decentralized web tooling with a focus on usability and deployment.</p>
+        <ul class="checks">
+          <li>Small, composable, auditable components</li>
+          <li>From prototypes to production integrations</li>
+          <li>Community and standards first</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section alt" id="projects">
+      <div class="container">
+        <h2>What we do</h2>
+        <div class="cards">
+          <article class="card">
+            <h3>Cryptocurrency Validator Nodes</h3>
+            <p>Provisioning, monitoring, and ongoing ops for validator infrastructure across select networks.</p>
+            <a class="card-link" href="#contact" aria-label="Validator nodes — contact us">Contact us →</a>
+          </article>
+          <article class="card">
+            <h3>Consulting</h3>
+            <p>Architecture reviews, audits, and hands-on help to ship reliable decentralized integrations.</p>
+            <a class="card-link" href="#contact" aria-label="Consulting — contact us">Get in touch →</a>
+          </article>
+          <article class="card">
+            <h3>ATM Integrations</h3>
+            <p>Turnkey modules for crypto ATM operators, compliance hooks, and telemetry.</p>
+            <a class="card-link" href="#contact" aria-label="ATM integrations — contact us">Learn more →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="team">
+      <div class="container">
+        <h2>Team</h2>
+        <figure class="team-figure">
+          <img src="team.jpg" alt="D-Web Technologies Inc. team standing in front of the office" class="team-photo">
+          <figcaption>People first. We build for real-world use, reliability, and community.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="container narrow">
+        <h2>Contact</h2>
+
+        <div class="contact-cards">
+          <article class="contact-card">
+            <h3>Email</h3>
+            <p><a href="mailto:bob@dweb.net">bob@dweb.net</a></p>
+          </article>
+          <article class="contact-card">
+            <h3>Crypto ATM locations</h3>
+            <p>Have a location for a crypto ATM? <a href="mailto:bob@dweb.net?subject=Crypto%20ATM%20Location">Contact us</a>.</p>
+          </article>
+          <article class="contact-card">
+            <h3>Domain inquiries</h3>
+            <p>Interested in buying <strong>dweb.net</strong>? Email <a href="mailto:bob@dweb.net?subject=dweb.net%20domain%20inquiry">bob@dweb.net</a>.</p>
+          </article>
+        </div>
+
+        <form id="contactForm" class="contact-form">
+          <h3>Send a message</h3>
+          <p class="muted">This form uses Formspree (no backend). Replace <code>YOUR_FORM_ID</code> in <code>script.js</code> with your Formspree ID.</p>
+          <label> Name
+            <input name="name" autocomplete="name" required>
+          </label>
+          <label> Email
+            <input type="email" name="email" autocomplete="email" required>
+          </label>
+          <label> Message
+            <textarea name="message" rows="5" required></textarea>
+          </label>
+          <button class="btn" type="submit">Send</button>
+          <p id="formStatus" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Decentralized Web Technologies Inc. • <a href="https://x.com/DWebTechSA" target="_blank" rel="me noopener">Twitter</a> • <a href="mailto:bob@dweb.net">bob@dweb.net</a></p>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

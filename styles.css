@@ -1,0 +1,102 @@
+/* Minimal, modern, accessible styles */
+:root{
+  --bg: #0b0c10;
+  --panel: #0f1117;
+  --text: #e6e6e6;
+  --muted:#a0a0a0;
+  --brand:#6cc3ff;
+  --brand-2:#8a7dff;
+  --radius:14px;
+  --padding: clamp(16px, 3vw, 28px);
+  --container: min(1080px, 92vw);
+}
+@media (prefers-color-scheme: light){
+  :root{
+    --bg:#ffffff;
+    --panel:#f6f7fb;
+    --text:#101217;
+    --muted:#667085;
+    --brand:#1b84ff;
+    --brand-2:#7c6cff;
+  }
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font:16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Inter, Helvetica, Arial, Noto Sans, "Apple Color Emoji","Segoe UI Emoji";
+  color:var(--text);
+  background:
+    radial-gradient(1000px 600px at 90% -10%, color-mix(in oklab, var(--brand) 15%, transparent), transparent),
+    radial-gradient(800px 600px at -10% 10%, color-mix(in oklab, var(--brand-2) 20%, transparent), transparent),
+    var(--bg);
+}
+a{color:var(--brand); text-decoration:none}
+a:hover{text-decoration:underline}
+img{max-width:100%; display:block}
+.container{width:var(--container); margin-inline:auto; padding:0 var(--padding)}
+.narrow{max-width:800px; margin-inline:auto}
+.section{padding: clamp(40px, 8vw, 96px) 0}
+.section.alt{background: color-mix(in oklab, var(--panel) 60%, transparent)}
+h1,h2,h3{line-height:1.1; letter-spacing:-.02em; margin:0 0 .6em}
+h1{font-size:clamp(2rem, 2.6rem + 1vw, 3.4rem)}
+h2{font-size:clamp(1.6rem, 1.2rem + 1.6vw, 2.2rem)}
+h3{font-size:1.1rem}
+p{margin:0 0 1em; color:var(--text)}
+.muted{color:var(--muted); font-size:.95rem}
+/* Header / Nav */
+.site-header{
+  position:sticky; top:0; backdrop-filter:saturate(1.2) blur(8px);
+  background: color-mix(in oklab, var(--bg) 65%, transparent);
+  border-bottom:1px solid color-mix(in oklab, var(--panel) 70%, transparent);
+  z-index:10;
+}
+.nav{display:flex; align-items:center; justify-content:space-between; height:64px}
+.brand{display:flex; align-items:center; gap:.6rem; font-weight:700; color:var(--text)}
+.logo-header{height:30px; width:auto}
+.menu{display:flex; gap:1rem; list-style:none; margin:0; padding:0}
+.menu a{padding:.5rem .7rem; border-radius:8px}
+.menu a:focus{outline:2px solid var(--brand)}
+.menu-btn{display:none}
+@media (max-width: 720px){
+  .menu-btn{display:inline-flex; align-items:center; gap:.4rem}
+  .menu{position:absolute; right:var(--padding); top:64px; background:var(--panel); padding:.6rem; border-radius:10px; display:none; box-shadow:0 10px 30px rgba(0,0,0,.2)}
+  .menu.open{display:flex; flex-direction:column; min-width:180px}
+}
+/* Hero */
+.hero{padding: clamp(40px, 8vw, 120px) 0}
+.hero-grid{display:grid; grid-template-columns: 1.2fr .8fr; gap: clamp(20px, 5vw, 60px); align-items:center}
+.hero-logo{filter: drop-shadow(0 6px 24px rgba(0,0,0,.35));}
+.cta{display:flex; gap:.8rem; margin-top:1rem}
+.btn{
+  display:inline-flex; align-items:center; justify-content:center;
+  padding:.8rem 1rem; border-radius:12px; border:1px solid transparent;
+  background:linear-gradient(120deg, var(--brand), var(--brand-2)); color:white; font-weight:600;
+  box-shadow:0 8px 24px rgba(0,0,0,.2);
+}
+.btn:hover{transform:translateY(-1px)}
+.btn-ghost{background:transparent; color:var(--text); border-color:color-mix(in oklab, var(--text) 18%, transparent)}
+/* Cards */
+.cards{display:grid; grid-template-columns: repeat(3, 1fr); gap: clamp(12px, 2.4vw, 22px)}
+.card{background:var(--panel); padding:1rem; border-radius:var(--radius); border:1px solid color-mix(in oklab, var(--panel) 70%, transparent)}
+.card-link{display:inline-block; margin-top:.6rem}
+@media (max-width: 900px){ .hero-grid{grid-template-columns:1fr} .cards{grid-template-columns:1fr 1fr} }
+@media (max-width: 520px){ .cards{grid-template-columns:1fr} }
+/* Team */
+.team-figure{display:grid; gap:.6rem}
+.team-photo{border-radius:12px; border:1px solid color-mix(in oklab, var(--panel) 70%, transparent)}
+/* Contact */
+.contact-cards{display:grid; gap:1rem; margin-bottom:1rem}
+.contact-card{background:var(--panel); padding:1rem; border-radius:var(--radius); border:1px solid color-mix(in oklab, var(--panel) 70%, transparent)}
+.contact-form{display:grid; gap:.8rem}
+.contact-form label{display:grid; gap:.3rem; font-weight:600}
+.contact-form input,.contact-form textarea{
+  width:100%; padding:.8rem; border-radius:12px; border:1px solid color-mix(in oklab, var(--text) 18%, transparent); background:transparent; color:var(--text)
+}
+/* Footer */
+.site-footer{padding:40px 0; border-top:1px solid color-mix(in oklab, var(--panel) 70%, transparent)}
+/* Utilities */
+.skip-link{position:absolute; left:-999px; top:auto; width:1px; height:1px; overflow:hidden}
+.skip-link:focus{left:0; width:auto; height:auto; background:var(--panel); color:var(--text); padding:.4rem .6rem; border-radius:8px}
+.checks{display:grid; gap:.3rem; padding-left:1.2rem}
+.checks li{list-style:"✓ ";}
