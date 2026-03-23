@@ -133,26 +133,31 @@
       </div>
     </section>
 <section class="section alt" id="donate">
-  <div class="container narrow" style="text-align:center;">
+  <div class="container narrow donate-wrap">
+    <h2>Support</h2>
 
-    <!-- Donate Button -->
-    <a class="btc-btn" href="bitcoin:bc1q4vuyzg9k7h588sk9fccj2g3nr05el94w95lkh4" target="_blank">
-     
-      <img src="btc.png" alt="Bitcoin" class="btc-icon">
-    </a>
+    <div class="donate-row">
+      
+      <!-- Donate Button -->
+      <a class="btc-btn" href="bitcoin:bc1q4vuyzg9k7h588sk9fccj2g3nr05el94w95lkh4">
+        <span>Donate</span>
+        <img src="btc.png" alt="Bitcoin" class="btc-icon">
+      </a>
 
-    <!-- Wallet Address -->
+      <!-- QR Code -->
+      <img 
+        src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=bitcoin:bc1q4vuyzg9k7h588sk9fccj2g3nr05el94w95lkh4"
+        alt="Bitcoin QR Code"
+        class="btc-qr"
+      >
+
+    </div>
+
+    <!-- Address BELOW -->
     <p class="btc-address">
-     Bitcoin address: bc1q4vuyzg9k7h588sk9fccj2g3nr05el94w95lkh4
+      bc1q4vuyzg9k7h588sk9fccj2g3nr05el94w95lkh4
     </p>
 
-    <!-- QR Code (uses Google Chart API - simple + free) -->
-  <img 
-  src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=bitcoin:bc1q4vuyzg9k7h588sk9fccj2g3nr05el94w95lkh4"
-  alt="Bitcoin QR Code"
-  class="btc-qr"
->
-    
   </div>
 </section>
     <section class="section" id="contact">
