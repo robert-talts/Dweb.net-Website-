@@ -215,3 +215,62 @@ p{margin:0 0 1em; color:var(--text)}
   opacity: 0.8;
   word-break: break-all;
 }
+#donate .donate-wrap {
+  text-align: center;
+}
+
+#donate .donate-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+#donate .btc-btn-image {
+  display: block;
+  text-decoration: none;
+  line-height: 0;
+}
+
+#donate .btc-btn-graphic {
+  display: block;
+  width: 220px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+#donate .btc-qr {
+  display: block;
+  width: 170px;
+  height: 170px;
+  background: #fff;
+  padding: 6px;
+  border-radius: 8px;
+}
+
+#donate .btc-address {
+  margin-top: 16px;
+  font-size: 0.9rem;
+  opacity: 0.85;
+  word-break: break-all;
+  text-align: center;
+}
+
+@media (max-width: 640px) {
+  #donate .donate-row {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  #donate .btc-btn-graphic {
+    width: 200px;
+  }
+
+  #donate .btc-qr {
+    width: 150px;
+    height: 150px;
+  }
+}
