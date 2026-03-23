@@ -112,6 +112,76 @@ p{margin:0 0 1em; color:var(--text)}
   font-weight: 600;
   text-decoration: none;
   color: var(--brand);
+  /* Bitcoin Donate Button (Animated) */
+.btc-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #444;
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  margin-top: 10px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+  position: relative;
+  overflow: hidden;
+
+  /* subtle idle pulse */
+  animation: btc-pulse 2.5s infinite ease-in-out;
+}
+
+/* Hover effect */
+.btc-btn:hover {
+  background: #f7931a;
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 6px 18px rgba(247, 147, 26, 0.4);
+  animation: none;
+}
+
+/* Click press */
+.btc-btn:active {
+  transform: scale(0.96);
+}
+
+/* Icon animation */
+.btc-icon {
+  width: 20px;
+  height: 20px;
+  transition: transform 0.2s ease;
+}
+
+.btc-btn:hover .btc-icon {
+  transform: rotate(10deg) scale(1.1);
+}
+
+/* Pulse glow */
+@keyframes btc-pulse {
+  0% {
+    box-shadow: 0 0 0 rgba(247, 147, 26, 0.0);
+  }
+  50% {
+    box-shadow: 0 0 12px rgba(247, 147, 26, 0.25);
+  }
+  100% {
+    box-shadow: 0 0 0 rgba(247, 147, 26, 0.0);
+  }
+}
+
+/* Address + QR (unchanged) */
+.btc-address {
+  font-size: 0.85rem;
+  margin-top: 12px;
+  word-break: break-all;
+  opacity: 0.8;
+}
+
+.btc-qr {
+  margin-top: 16px;
+  width: 140px;
+  height: 140px;
+}
   transition: background-color 0.2s, color 0.2s;
 }
 .gh-badge svg { flex-shrink: 0; }
