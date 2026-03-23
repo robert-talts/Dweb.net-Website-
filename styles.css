@@ -241,16 +241,14 @@ p{margin:0 0 1em; color:var(--text)}
   height: auto;
   border-radius: 12px;
 }
-
 #donate .btc-qr {
   display: block;
   width: 170px;
-  height: 170px;
+  height: auto;
   background: #fff;
   padding: 6px;
   border-radius: 8px;
 }
-
 #donate .btc-address {
   margin-top: 16px;
   font-size: 0.9rem;
@@ -283,14 +281,17 @@ p{margin:0 0 1em; color:var(--text)}
     gap: 12px;
   }
 
-  /* SAME SIZE for both */
   #donate .btc-btn-graphic,
   #donate .btc-qr {
-    width: 140px;
-    height: 140px;
+    width: 120px !important;
+    height: auto !important;
   }
 
-  /* Ensure image scales properly */
+  #donate .btc-btn-image,
+  #donate .btc-qr {
+    flex: 0 0 auto;
+  }
+}
   #donate .btc-btn-graphic {
     object-fit: contain;
   }
