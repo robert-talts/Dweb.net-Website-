@@ -257,20 +257,7 @@ p{margin:0 0 1em; color:var(--text)}
   text-align: center;
 }
 
-@media (max-width: 640px) {
-  #donate .donate-row {
-    flex-direction: column;
-    gap: 20px;
-  }
 
-  #donate .btc-btn-graphic {
-    width: 200px;
-  }
-
-  #donate .btc-qr {
-    width: 150px;
-    height: 150px;
-  }
 }
 @media (max-width: 640px) {
   #donate .donate-row {
@@ -290,7 +277,7 @@ p{margin:0 0 1em; color:var(--text)}
   #donate .btc-btn-image,
   #donate .btc-qr {
     flex: 0 0 auto;
-  }
+  
 }
   #donate .btc-btn-graphic {
     object-fit: contain;
