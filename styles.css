@@ -274,3 +274,24 @@ p{margin:0 0 1em; color:var(--text)}
     height: 150px;
   }
 }
+@media (max-width: 640px) {
+  #donate .donate-row {
+    flex-wrap: nowrap !important;
+    flex-direction: row !important;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+  }
+
+  /* SAME SIZE for both */
+  #donate .btc-btn-graphic,
+  #donate .btc-qr {
+    width: 140px;
+    height: 140px;
+  }
+
+  /* Ensure image scales properly */
+  #donate .btc-btn-graphic {
+    object-fit: contain;
+  }
+}
