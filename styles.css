@@ -186,3 +186,32 @@ p{margin:0 0 1em; color:var(--text)}
 }
 .gh-badge svg { flex-shrink: 0; }
 .gh-badge:hover { background-color: var(--brand); color: #fff; }
+.donate-wrap {
+  text-align: center;
+}
+
+.donate-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+/* QR cleaner look */
+.btc-qr {
+  width: 170px;
+  height: 170px;
+  background: #fff;
+  padding: 6px;
+  border-radius: 8px;
+}
+
+/* Address spacing */
+.btc-address {
+  margin-top: 16px;
+  font-size: 0.85rem;
+  opacity: 0.8;
+  word-break: break-all;
+}
